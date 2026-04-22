@@ -5,22 +5,24 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Catalog from './pages/Catalog';
 import ProductDetails from './pages/ProductDetails';
-import Embroidery from './pages/Embroidery'; // Ensure this import is here
+import Embroidery from './pages/Embroidery';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/checkout/:id" element={<Checkout />} />
-        <Route path="/embroidery" element={<Embroidery />} /> {/* This line is vital */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/embroidery" element={<Embroidery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
